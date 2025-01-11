@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ToolTitle = ({ title, para, viewButton, link }) => {
   return (
-    //___________________ using props ________________________
+    //___________________ AdminContent-Section tools ________________________
 
     <div className="p-6 bg-blue-50 rounded-lg shadow-lg flex flex-col items-center text-center">  
       <h3 className="text-xl font-bold text-blue-950">{title}</h3>

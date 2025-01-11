@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ToolTitle from './adminTools/ToolTitle';
+import ToolTitle from '../admin/ToolTitle';
 import Banner from '../bannerProps/Banner';
 
 
@@ -19,6 +18,8 @@ const Admin = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {/*______________ User Management _____________________*/}
             <ToolTitle title='User Management' para='View, add, edit, or delete user accounts.' viewButton='Manage Users' link='/admin/users'/>
+       
+            <ToolTitle title='Rooms Management' para='Updating the rooms names, images, descriptions' viewButton='Update Rooms' link='/admin/updateroom' />         
             {/*________________ Room Bookings __________________________*/}
             <ToolTitle title='Room Bookings' para='Track and manage all room bookings.' viewButton='View Bookings' link='/admin/bookings' /> 
             {/*_________________ Content Management ___________________*/}

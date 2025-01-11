@@ -9,42 +9,34 @@ use Illuminate\Support\Facades\Validator;
 
 class SuperadminController extends Controller
 {
-    public function superadminregistration(Request $request) 
-    {
+    //________________________ SuperAdmin SignUp function field ______________________
+        public function superadminregistration(Request $request) 
+            {
+                $validator = Validator::make($request->all(),[
+                    'name' => 'required|max:255',
+                    'email' => 'required|max:255|email',
+                    'password' => 'required|min:8', ]);
+                
+                if($validator->fails())
+                { return response()->json($validator->errors(),400); }
 
-        $validator = Validator::make($request->all(),[
-            'name' => 'required|max:255',
-            'email' => 'required|max:255|email',
-            'password' => 'required|min:8',
+                    $superadmin = new Superadmin();
+                    $superadmin->name=$request->input('name');
+                    $superadmin->email=$request->input('email');
+                    $superadmin->password= Hash::make($request->input('password'));
+                    $superadmin->save();
+                    return$superadmin;
+            }
 
-        ]);
-            
-        if($validator->fails())
-        {
-            return response()->json($validator->errors(),400);
-        }
-
-            $superadmin = new Superadmin();
-            $superadmin->name=$request->input('name');
-            $superadmin->email=$request->input('email');
-            $superadmin->password= Hash::make($request->input('password')) ;
-
-            $superadmin->save();
-            return$superadmin;
-
-    }
-
-    
     function superadminlogin(Request $req)
     {
         $validator = Validator::make($req->all(),[
             'email'=> 'required|max:255K|email',
-            'password'=> 'required|min:8',
-        ]);
+            'password'=> 'required|min:8', ]);
 
         if($validator->fails())
         {
-            return response()->json(['errors' => $validator->errors()],400);
+            return response()->json(['errors' => $validator->errors()],400); 
         }
 
         $superadmin= Superadmin::where('email',$req->email)->first();
@@ -54,5 +46,4 @@ class SuperadminController extends Controller
         }
         return $superadmin;
     }
-
 }

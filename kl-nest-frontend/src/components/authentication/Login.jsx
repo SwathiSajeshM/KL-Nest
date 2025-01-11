@@ -144,7 +144,7 @@ const Login = () => {
                       </div>
            {/*______________________ Button __________________________*/}
                       <button type="submit" className="w-full bg-[#235784] text-white py-3 px-4 rounded-md hover:bg-light-blue-600 transition duration-300 font-semibold mb-4" > Login </button>
-                      <p className="text-center text-sm text-gray-600"> Don't have an account?{''} <span><Link to='/'>Sign Up</Link></span> </p>
+                      <p className="text-center text-sm text-gray-600"> Don't have an account?{''} <span className='hover:underline'><Link to='/'>Sign Up</Link></span> </p>
                 </form>
           </div>
 

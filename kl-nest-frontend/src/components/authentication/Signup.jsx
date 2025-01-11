@@ -112,9 +112,7 @@ const Signup = () =>
   return (
  
     <div>
-
-      <div className="flex h-screen ">
-     
+      <div className="flex h-screen "> 
           <div className="w-1/2 flex flex-col justify-center items-center bg-gradient-to-r from-[#a4bfe1] to-white">
                           <h1 className="text-4xl font-bold text-black mb-8">Sign Up</h1>
                 <form onSubmit={submitsignfun} className="w-full max-w-md">
@@ -136,7 +134,7 @@ const Signup = () =>
                 {/*___________________________ Password __________________________*/}
                       <div className="mb-6">
                         <label htmlFor="password" className="block text-sm font-medium text-black mb-2"> Password </label>
-                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} id="password" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-light-blue-500" autoComplete='off' placeholder="••••••••"  />
+                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} id="password" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-light-blue-500" autoComplete='off' placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;"  />
                         {errors.password && <small className='text-red-500'>{errors.password[0]}</small>}
                       </div>
 

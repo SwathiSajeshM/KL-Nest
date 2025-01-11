@@ -10,6 +10,7 @@ import Testimonials from './Testimonial'
 const Home = () => {
   return (
       <div className=' h-auto'>
+        
         <Navbar />
 
         {/*__________________ Home Page _________________________*/}

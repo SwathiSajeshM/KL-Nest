@@ -17,11 +17,8 @@ const AdminLogin = () => {
     e.preventDefault();
 
     if (username === adminCredentials.username && password === adminCredentials.password) {
-      navigate('/admin'); 
-    } else {
-      setError('Invalid username or password');
-    }
-  };
+      navigate('/admin'); } else {
+      setError('Invalid username or password'); } };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-blue-50">

@@ -11,7 +11,7 @@ const About = () => {
       <Navbar />
       <div className="pt-36">
    
-<Banner title='About' logoName='KL~Nest' link='/home' />
+<Banner title='About' logoName='KL~Nest' pipesimbol='|' link='/home' />
 
        
         <section className="py-12 px-20 bg-white flex flex-col md:flex-row gap-10 items-center">
